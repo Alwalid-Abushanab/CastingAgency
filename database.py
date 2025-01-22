@@ -4,12 +4,7 @@ import os
 
 load_dotenv()
 
-database_host = os.getenv("DB_HOST")
-database_user = os.getenv("DB_USER")
-database_password = os.getenv("DB_PASSWORD")
-database_name = os.getenv("DB_NAME")
-
-database_path = f'postgresql://{database_user}:{database_password}@{database_host}/{database_name}'
+database_path = os.getenv("DATABASE_URL")
 
 db = SQLAlchemy()
 
